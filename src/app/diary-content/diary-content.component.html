@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-diary-form (addDiary)='addNewDiary($event)'></app-diary-form>
+            <!-- <button (click)='deleteDiary($event,i)'>Delete</button> -->
+            
+        </div>
+        <div class="col-md-6">
+            <div>
+                <h1 class="h1">My Diary Book</h1>
+                <div *ngFor='let diary of diaries; index as i' >
+                    <h3 appHighlight>{{i+1}}. {{diary.title}} on {{diary.date | date:'shortDate'}}</h3>
+                    <button  (click)='showDetails(i)' class="btn btn-success">Show Details</button> 
+                    <app-diary-details *ngIf='diary.showDescription' [diary]='diary' (isDelete)='diaryDelete($event,i)'></app-diary-details>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

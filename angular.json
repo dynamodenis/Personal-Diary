@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Diary": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Diary"
+    }
+  },
+  "defaultProject": "Diary",
+  "cli": {
+    "analytics": "611e1718-5bab-4f8d-8318-e38ca0dd5dc1"
+  }
 }
